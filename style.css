@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Stick No Bills", sans-serif;
+}
+
+body {
+  background:
+      linear-gradient(217deg, rgba(0, 0, 0, 0.8), rgba(135, 77, 77, 0) 100.71%),
+      linear-gradient(127deg, rgba(89, 92, 123, 0.8), rgba(0,255,0,0)99.71%);    
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  color: #ccc;
+  font-size: 60px;
+  margin: 15px 0 5px;
+}
+
+.galery {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+
+.slides {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80vh;
+}
+
+.slide {
+  border-radius: 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+}
+
+.slide h3 {
+  width: 30vh;
+  display: inline-block;
+  margin: 0;
+  font-size: 30px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transform: rotate(-90deg);
+  transform-origin:left;
+  margin-left: 10px;
+  color: #444;
+  transition: all 0.3s ease-in;
+  
+}
+
+.active {
+  flex: 10;
+}
+
+.slide.active h3 {
+  width: auto;
+  transform: rotate(0deg);
+  opacity: 1;
+  /* transition: opasity 0.3 ease-in 0.5; */
+  transition: all 0.3s ease-in;
+}
